@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+.mat-header-cell,
+.mat-cell {
+  text-align: center;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}

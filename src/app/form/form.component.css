@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-radio-button {
+  width: 50%;
+}
+
+.btn-box {
+  margin-top: 1rem;
+}
+
+.mat-raised-button {
+  width: 100%;
+}
+
+.radioBox {
+  margin-top: 1rem;
+}

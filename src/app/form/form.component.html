@@ -1,0 +1,72 @@
+<form [formGroup]="data" (ngSubmit)="onSubmit(data)" #myForm="ngForm">
+  <div>
+    <mat-form-field appearance="standard">
+      <mat-label>이름</mat-label>
+      <input
+        matInput
+        placeholder="이름을 입력하세요."
+        [formControl]="name"
+        required
+      />
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-error *ngIf="name.invalid">이름을 입력하세요.</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="standard">
+      <mat-label>연락처</mat-label>
+      <input
+        matInput
+        placeholder="연락처를 입력하세요."
+        [formControl]="phoneNumber"
+        required
+      />
+      <mat-icon matSuffix>phone_android</mat-icon>
+      <mat-error *ngIf="phoneNumber.invalid">연락처를 입력하세요.</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="standard">
+      <mat-label>학교</mat-label>
+      <input
+        matInput
+        placeholder="학교를 입력하세요."
+        [formControl]="school"
+        required
+      />
+      <mat-icon matSuffix>school</mat-icon>
+      <mat-error *ngIf="school.invalid">학교를 입력하세요.</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="standard">
+      <mat-label>부서</mat-label>
+      <input
+        matInput
+        placeholder="부서를 입력하세요."
+        [formControl]="part"
+        required
+      />
+      <mat-icon matSuffix>history_edu</mat-icon>
+      <mat-error *ngIf="part.invalid">부서를 입력하세요.</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="radioBox">
+    <mat-radio-group
+      aria-label="성별을 선택하세요."
+      [formControl]="gender"
+      required
+    >
+      <mat-radio-button value="1" [checked]="+gender.value === 1"
+        >남성</mat-radio-button
+      >
+      <mat-radio-button value="2" [checked]="+gender.value === 2"
+        >여성</mat-radio-button
+      >
+    </mat-radio-group>
+    <mat-error *ngIf="!submit && gender.invalid">성별을 입력하세요.</mat-error>
+  </div>
+  <div class="btn-box">
+    <button mat-raised-button color="accent" type="submit">등록하기</button>
+  </div>
+</form>
